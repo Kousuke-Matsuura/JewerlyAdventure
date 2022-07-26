@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
     string oldAnime = "";
 
     public static string gameState = "playing";
+
+    public int score = 0;
+
     //Start is called before the first frame update*/
     void Start()
     {
@@ -129,6 +132,11 @@ public class PlayerController : MonoBehaviour
         }else if(collision.gameObject.tag == "Dead")
         {
             GameOver();
+        }else if(collision.gameObject.tag == "ScoreItem")
+        {
+            ItemData item = collision.gameObject.GetComponent<ItemData>();
+            score = item.value;
+            Destroy(collision.gameObject);
         }
     }
     

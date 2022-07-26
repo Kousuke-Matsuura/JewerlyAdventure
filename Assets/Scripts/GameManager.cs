@@ -19,6 +19,10 @@ public class GameManager : MonoBehaviour
     public GameObject timeText;
     TimeController timeCnt;
 
+    public GameObject scoreText;
+    public static int totalScore;
+    public int stageScore = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +37,7 @@ public class GameManager : MonoBehaviour
                 timeBar.SetActive(false);
             }
         }
+        UpdateScore();
     }
 
     // Update is called once per frame
@@ -50,7 +55,12 @@ public class GameManager : MonoBehaviour
             if(timeCnt != null)
             {
                 timeCnt.isTimeOver = true;
+                int time = (int)timeCnt.displayTime;
+                totalScore += time * 10;
             }
+            totalScore += stageScore;
+            stageScore = 0;
+            UpdateScore();
 
         }else if(PlayerController.gameState == "gameover")
         {
@@ -85,11 +95,24 @@ public class GameManager : MonoBehaviour
                     }
                 }
             }
+
+            if(playerCnt.score != 0)
+            {
+                stageScore += playerCnt.score;
+                playerCnt.score = 0;
+                UpdateScore();
+            }
         }
     }
 
     void InactiveImage()
     {
         mainImage.SetActive(false);
+    }
+
+    void UpdateScore()
+    {
+        int score = stageScore + totalScore;
+        scoreText.GetComponent<Text>().text = score.ToString();
     }
 }
