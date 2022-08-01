@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
 
     public int score = 0;
 
+    bool isMoving = false;
+
     //Start is called before the first frame update*/
     void Start()
     {
@@ -44,6 +46,11 @@ public class PlayerController : MonoBehaviour
         if(gameState != "playing")
         {
             return;
+        }
+
+        if(isMoving == false)
+        {
+            axisH = Input.GetAxisRaw("Horizontal");
         }
 
         axisH = Input.GetAxisRaw("Horizontal");
@@ -160,5 +167,18 @@ public class PlayerController : MonoBehaviour
     {
         Rigidbody2D rbody = GetComponent<Rigidbody2D>();
         rbody.velocity = new Vector2(0, 0);
+    }
+
+    public void SetAxis(float h, float v)
+    {
+        axisH = h;
+        if(axisH == 0)
+        {
+            isMoving = false;
+        }
+        else
+        {
+            isMoving = true;
+        }
     }
 } 
