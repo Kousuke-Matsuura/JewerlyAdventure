@@ -23,6 +23,9 @@ public class GameManager : MonoBehaviour
     public static int totalScore;
     public int stageScore = 0;
 
+    public AudioClip meGameOver;
+    public AudioClip meGameClear;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +65,13 @@ public class GameManager : MonoBehaviour
             stageScore = 0;
             UpdateScore();
 
+            AudioSource soundPlayer = GetComponent<AudioSource>();
+            if(soundPlayer != null)
+            {
+                soundPlayer.Stop();
+                soundPlayer.PlayOneShot(meGameClear);
+            }
+
         }else if(PlayerController.gameState == "gameover")
         {
             mainImage.SetActive(true);
@@ -74,6 +84,12 @@ public class GameManager : MonoBehaviour
             if(timeCnt != null)
             {
                 timeCnt.isTimeOver = true;
+            }
+            AudioSource soundPlayer = GetComponent<AudioSource>();
+            if(soundPlayer != null)
+            {
+                soundPlayer.Stop();
+                soundPlayer.PlayOneShot(meGameOver);
             }
 
         }else if(PlayerController.gameState == "playing")
