@@ -4064,7 +4064,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7341198079756779098, guid: 7d677812c4d252f4081bba655645fcf1, type: 3}
       propertyPath: sceneName
-      value: Stage2
+      value: Stage3
       objectReference: {fileID: 0}
     - target: {fileID: 7341198079756779101, guid: 7d677812c4d252f4081bba655645fcf1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4168,7 +4168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7341198080263928731, guid: 7d677812c4d252f4081bba655645fcf1, type: 3}
       propertyPath: sceneName
-      value: Stage3
+      value: Result
       objectReference: {fileID: 0}
     - target: {fileID: 8317002531249434623, guid: 7d677812c4d252f4081bba655645fcf1, type: 3}
       propertyPath: m_Enabled
