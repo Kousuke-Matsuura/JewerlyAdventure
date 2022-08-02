@@ -6,7 +6,7 @@ public class EnemyController : MonoBehaviour
 {
     public float speed = 3.0f;
     public string direction = "left";
-    public float range = 0.0f;
+    public float range = 4.0f;
     Vector3 defPos;
     // Start is called before the first frame update
     void Start()

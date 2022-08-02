@@ -49,13 +49,13 @@ public class VirtualPad : MonoBehaviour
         GetComponent<RectTransform>().localPosition = newTabPos;
 
         PlayerController plcnt = player.GetComponent<PlayerController>();
-        plcnt.SetAxis(axis.x, axis.y);
+        //plcnt.SetAxis(axis.x, axis.y);
     }
 
     public void PadUp()
     {
         GetComponent<RectTransform>().localPosition = defPos;
         PlayerController plcn = player.GetComponent<PlayerController>();
-        plcn.SetAxis(0, 0);
+        //plcn.SetAxis(0, 0);
     }
 }

@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
 
     public int score = 0;
 
-    bool isMoving = false;
+    //bool isMoving = false;
 
     //Start is called before the first frame update*/
     void Start()
@@ -48,10 +48,10 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        if(isMoving == false)
+        /*if(isMoving == false)
         {
             axisH = Input.GetAxisRaw("Horizontal");
-        }
+        }*/
 
         axisH = Input.GetAxisRaw("Horizontal");
         if (axisH > 0.0f)
@@ -169,7 +169,7 @@ public class PlayerController : MonoBehaviour
         rbody.velocity = new Vector2(0, 0);
     }
 
-    public void SetAxis(float h, float v)
+    /*public void SetAxis(float h, float v)
     {
         axisH = h;
         if(axisH == 0)
@@ -180,5 +180,5 @@ public class PlayerController : MonoBehaviour
         {
             isMoving = true;
         }
-    }
+    }*/
 } 

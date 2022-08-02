@@ -853,7 +853,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!1 &7341198079339660114
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,13 +1208,13 @@ MonoBehaviour:
   panel: {fileID: 7341198080240690714}
   restartButton: {fileID: 7341198079756779103}
   nextButton: {fileID: 7341198080263927904}
-  timeBar: {fileID: 0}
-  timeText: {fileID: 0}
-  scoreText: {fileID: 0}
+  timeBar: {fileID: 6517122069525424723}
+  timeText: {fileID: 3395118903275989837}
+  scoreText: {fileID: 4633096939570605771}
   stageScore: 0
   meGameOver: {fileID: 8300000, guid: cf50b63663cd74874a41f280d093a9d7, type: 3}
   meGameClear: {fileID: 8300000, guid: c2c5990fde1b84fc1b8686b491fe7c7f, type: 3}
-  inputUI: {fileID: 201009340632119601}
+  inputUI: {fileID: 0}
 --- !u!114 &2269849003563672851
 MonoBehaviour:
   m_ObjectHideFlags: 0
