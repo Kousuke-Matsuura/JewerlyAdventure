@@ -47,7 +47,7 @@ public class MovingBlock : MonoBehaviour
             
             if (isReverse)
             {
-                if((perDX >= 0.0f && y <= defPos.x) || (perDX < 0.0f && x >= defPos.x))
+                if((perDX >= 0.0f && x <= defPos.x) || (perDX < 0.0f && x >= defPos.x))
                 {
                     endX = true;
                 }
@@ -59,7 +59,7 @@ public class MovingBlock : MonoBehaviour
             }
             else
             {
-                if((perDX >= 0.0f && x >= defPos.x + moveX))
+                if((perDX >= 0.0f && x >= defPos.x + moveX) || (perDX < 0.0f && x <= defPos.x + moveX))
                 {
                     endX = true;
                 }
@@ -100,6 +100,18 @@ public class MovingBlock : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
+        {
+            collision.transform.SetParent(transform);
+            if (isMoveWhenOn)
+            {
+                isCanMove = true;
+            }
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
         {
             collision.transform.SetParent(null);
         }
