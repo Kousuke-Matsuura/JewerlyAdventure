@@ -55,7 +55,7 @@ public class MovingBlock : MonoBehaviour
                 {
                     endY = true;
                 }
-                transform.Translate(new Vector3(-perDX, -perDY, defPos.z));
+                transform.Translate(new Vector3(-perDX, -perDY, defPos.z)); //移動させるスクリプト
             }
             else
             {
@@ -68,8 +68,8 @@ public class MovingBlock : MonoBehaviour
                     endY = true;
                 }
 
-                Vector3 v = new Vector3(perDX, perDY, defPos.x);
-                transform.Translate(v);
+                Vector3 v = new Vector3(perDX, perDY, defPos.z); // 移動させるスクリプト
+                transform.Translate(v); //移動させるスクリプト
             }
             if(endX && endY)
             {
