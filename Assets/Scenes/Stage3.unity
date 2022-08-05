@@ -711,7 +711,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.0000005
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -758,7 +758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftLimit: 0
-  rightLimit: 78.2
+  rightLimit: 79.6
   topLimit: 6
   bottomLimit: 0
   subScreen: {fileID: 182602256}
@@ -3924,7 +3924,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4841789888205045431, guid: 4b7879353cfcb9545b0aab81ac94c727, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 80
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 4841789888205045431, guid: 4b7879353cfcb9545b0aab81ac94c727, type: 3}
       propertyPath: m_LocalPosition.y
