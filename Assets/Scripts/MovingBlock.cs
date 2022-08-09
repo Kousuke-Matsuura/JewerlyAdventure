@@ -97,7 +97,7 @@ public class MovingBlock : MonoBehaviour
         isCanMove = false;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision) //床に対して何がぶつかっているのか？と読み替えるべし！
     {
         if (collision.gameObject.tag == "Player")
         {
@@ -106,10 +106,12 @@ public class MovingBlock : MonoBehaviour
             {
                 isCanMove = true;
             }
+            //collision.transform.localScale = new Vector3(1, 1, 1);
+            //collision.transform.localScale = Vector3.one; 
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnCollisionExit2D(Collision2D collision)//何が床から離れたのか？を見るメソッド
     {
         if(collision.gameObject.tag == "Player")
         {

@@ -23,14 +23,16 @@ public class EnemyController : MonoBehaviour
     {
         if(range > 0.0f)
         {
-            if(transform.position.x > defPos.x - (range / 2))
+            if(transform.position.x < defPos.x - (range / 2))
             {
                 direction = "right";
+                Debug.Log(direction);
                 transform.localScale = new Vector2(-1, 1);
             }
             if(transform.position.x > defPos.x + (range / 2))
             {
                 direction = "left";
+                Debug.Log(direction);
                 transform.localScale = new Vector2(1, 1);
             }
         }
@@ -51,6 +53,7 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.name);
         if(direction == "right")
         {
             direction = "left";

@@ -44,7 +44,7 @@ public class TimeController : MonoBehaviour
                     isTimeOver = true;
                 }
             }
-            Debug.Log("TIMES:" + displayTime);
+            //Debug.Log("TIMES:" + displayTime);
         }
     }
 }
